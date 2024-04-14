@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+header {
+    background-image: url(https://user-images.githubusercontent.com/30896388/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    position: relative;
+    margin: 0px;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+img {
+    display: inline;
+    margin: 20px;
+}
+ul {
+    float: right;
+}
+
+li{
+    display: inline-block;
+    font-weight: bold;
+    list-style-type: none;
+    margin: 7px 30px;
+}    
+
+li:hover{
+    color: blueviolet;
+}
+
+body p {
+    display: block;
+}
+/* To position your text on the page, check out the CSS properties position, display, margin and padding (take a look in the Course Notes and in Google). */
