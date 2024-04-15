@@ -1,15 +1,17 @@
 body {
-    margin: 0;
+    margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    padding: 0px;
 }
 header {
     background-image: url(https://user-images.githubusercontent.com/30896388/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100vh;
     position: relative;
     margin: 0px;
+    padding: 0px;
+    height: 100vh;
+   
 }
 
 nav {
@@ -18,7 +20,7 @@ nav {
     align-items: center;
 }
 
-img {
+.logo {
     display: inline;
     margin: 20px;
 }
@@ -41,3 +43,13 @@ body p {
     display: block;
 }
 /* To position your text on the page, check out the CSS properties position, display, margin and padding (take a look in the Course Notes and in Google). */
+
+.floating{
+    width: 60rem;
+    justify-content: end; 
+}
+h1{
+    font-size: 5rem;
+    margin: 0px;
+    padding: 0px;
+}
