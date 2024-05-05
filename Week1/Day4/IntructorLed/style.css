@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: black;
+    position: relative;
+    height: 45px;
+}
+.navcontainer {
+    align-content: center;
+    align-items: center;
+}
+.fa-crown {
+    float: left;
+    margin: 15px;
+}
+#products{
+    text-decoration: none;
+    right: 20px;
+    color: white;
+    margin: 11px;
+    position: absolute;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:rgb(116, 77, 27);
+    text-align: center;
+    align-content: center;
+    background-color: aqua;
+    height: 40px;
+}
