@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+    <!--    
+    1. Create a structure with a container, 2 rows and 3 columns in each row. What should be the width of each column so that the 3 columns will take the whole width of the row ?  -->
+
+    <div class="container">
+        <div class="row a1">
+            <div class="col-md-4" style="background-color: red;">1</div>
+            <div class="col-md-4" style="background-color: blue;">2</div>
+            <div class="col-md-4" style="background-color: green;">3</div>
+        </div>
+        <div class="row b1">
+            <div class="col-md-4" style="background-color: yellow;">4</div>
+            <div class="col-md-4" style="background-color: orange;">5</div>
+            <div class="col-md-4" style="background-color: purple;">6</div>
+        </div>
+    </div>
+
+    <br>
+    <!-- 2. Create a structure with a container, 2 rows and 2 columns in each row. Use offset to make a space between the 2 columns -->
+
+    <div class="container">
+        <div class="row 2a">
+            <div class="col-md-4" style="background-color: red;">1</div>
+            <div class="col-md-4 offset-md-4" style="background-color: blue;">2</div>
+        </div>
+        <div class="row 2b">
+            <div class="col-md-4" style="background-color: green;">3</div>
+            <div class="col-md-4 offset-md-4" style="background-color: yellow;">4</div>
+        </div>
+    </div>
+    <br>
+    <!-- 3. Create a structure with 2 rows and 2 columns in each row. What happens if you don't have any container ? -->
+    <div class="row 3a">
+        <div class="col-md-4" style="background-color: pink;">1</div>
+        <div class="col-md-4" style="background-color: yellow;">2</div>
+    </div>
+    <div class="row 3b">
+        <div class="col-md-4" style="background-color: orange;">3</div>
+        <div class="col-md-4" style="background-color: purple;">4</div>
+    </div>
+    it does not take the whole width of the page
+    <br><br>
+
+    <!-- 4. Create a structure with a container, 2 columns. What happens if you don't have any row ? -->
+    <div class="container">
+        <div class="col-md-6" style="background-color: red;">1</div>
+        <div class="col-md-6" style="background-color: blue;">2</div>
+    </div>
+    it does not do side by side columns
+    <br>
+
+    <!-- 5. Create a structure with a container, 1 row and 3 columns in the row. Make it responsive so depending of the width of the screen, the columns will be displayed differently. Write a code for 4 different type of screen.     -->
+<div class="container">
+    <div class="row a5 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3" style="background-color: red;">1</div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3" style="background-color: blue;">2</div>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3" style="background-color: green;">3</div>
+    </div>
+
+
+</body>
+</html>
