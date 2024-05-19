@@ -6,7 +6,7 @@
 
 // Evaluate the comparisons found below:
 
-// // Look at this link for help
+// // Look at this link for help http://sticksandstones.kstrom.com/appen.html
 
 // console.log(5 >= 1) //true
 // console.log(0 === 1) //false
