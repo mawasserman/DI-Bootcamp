@@ -3,15 +3,28 @@
 // Hint: Use Switch Case
 
 // Ask the user which language they speak.
-
+let userLanguage = prompt("Which language do you speak?");
 // Convert the user’s answer to lowercase, so that all the user’s inputs will be accepted in the if statement. For example “english” or “English” or “ENGlish” ect…”
+let lowUserLanguage = userLanguage.toLowerCase();
 
 // Create a few conditions :
+switch (lowUserLanguage) {
 // If the user speaks French : display “Bonjour”
+    case "french":
+        console.log("Bonjour");
+        break;
 // If the user speaks English : display “Hello”
+    case "english":
+        console.log("Hello");
+        break;
 // If the user speaks Hebrew : display “Shalom”
+    case "hebrew":
+        console.log("Shalom");
+        break;
 // If the user doesn’t speak any of these 3 languages: display ‘01110011 01101111 01110010 01110010 01111001’
-
+    default:
+        console.log("01110011 01101111 01110010 01110010 01111001");
+}
 
 // Exercise 2 : The Grade Assigner
 // Instructions
