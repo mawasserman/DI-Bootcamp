@@ -75,3 +75,5 @@ else if(usersConnected == 2){
 else {
     console.log(`${users[0]}, ${users[1]} and ${usersConnected - 2} more are online`)
 }
+
+//Irina usou switch no exercicio 4, interessante... 

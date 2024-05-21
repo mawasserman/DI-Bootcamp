@@ -29,7 +29,7 @@ switch (lowUserLanguage) {
 // Exercise 2 : The Grade Assigner
 // Instructions
 // Ask the user for their grade.
-let userGrade = prompt("What is your grade?");
+let userGrade = Number(prompt("What is your grade?"));
 
 // If the grade is bigger than 90, console.log “A”
 if(userGrade > 90){
