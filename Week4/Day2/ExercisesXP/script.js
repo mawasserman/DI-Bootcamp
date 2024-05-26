@@ -118,11 +118,11 @@ const prices = {
 let shoppingList = ["banana", "orange", "apple"];
 
 // Create a function called myBill() that takes no parameters.
-function myBill(){
+// function myBill(){
 
 // The function should return the total price of your shoppingList. In order to do this you must follow these rules:
 // The item must be in stock. (Hint : check out if .. in)
-    if(shoppingList in stock){
+    // if(shoppingList in stock){
 // If the item is in stock find out the price in the prices object.
 
 // Call the myBill() function.
@@ -238,8 +238,7 @@ function totalVacationCost(){
     let planeTicketsCost = planeRideCost();
     let carRentalCost = rentalCarCost();
     let totalCost = hotelCost + planeTicketsCost + carRentalCost;
-    console.log(`The car cost: $${carRentalCost}, the hotel cost: $${hotelCost}, the plane tickets cost: $${planeTicketsCost}.`);
-    return totalCost;
+    alert(`The car cost: ${carRentalCost}, the hotel cost: ${hotelCost}, the plane tickets cost: ${planeTicketsCost}. The total cost of your vacation is ${totalCost}.`);    
 }
 // Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
 // Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the function totalVacationCost().
