@@ -18,7 +18,7 @@
 // // Create a function called infoAboutPerson(personName, personAge, personFavoriteColor) that takes 3 parameters.
 // // The function should console.log a sentence about the person (ie. “You name is …, you are .. years old, your favorite color is …”)
 // function infoAboutPerson(name, age, favoriteColor){
-//     console.log(`You name is ${name}, you are ${age} years old, your favorite color is ${favoriteColor}.`);
+//     console.log(`Your name is ${name}, you are ${age} years old, your favorite color is ${favoriteColor}.`);
 // }
 
 // // Call the function twice with the following arguments:
@@ -118,7 +118,7 @@ const prices = {
 let shoppingList = ["banana", "orange", "apple"];
 
 // Create a function called myBill() that takes no parameters.
-// function myBill(){
+function myBill()
 
 // The function should return the total price of your shoppingList. In order to do this you must follow these rules:
 // The item must be in stock. (Hint : check out if .. in)
@@ -128,14 +128,28 @@ let shoppingList = ["banana", "orange", "apple"];
 // Call the myBill() function.
 
 // Bonus: If the item is in stock, decrease the item’s stock by 1
+//resolução do Daniil
+// function myBill () {
+//     let result = 0;
+//     for (const key in stock) {
+//         if(shoppingList.includes(key) && stock[key]>= 1){
+//             result = result + prices[key]
+//             stock[key] = stock[key] - 1
+//         }
+//     }
+//     console.log(stock)
+//     console.log(result)
+//     return result
 
+// }
+// o problema que o pete apontou é que se ele tiver uns 500 itens no stock, ele vai fazer 500 iterações, então é melhor fazer um loop no shoppingList
 
 // Exercise 5 : What’s In My Wallet ?
 // Instructions
 // Note: Read the illustration (point 4), while reading the instructions
 
 // Create a function named changeEnough(itemPrice, amountOfChange) that receives two arguments :
-let changeEnough(itemPrice, amountOfChange){
+let changeEnough= function(itemPrice, amountOfChange){
 
 // In the function, determine whether or not you can afford the item.
 // If the sum of the change is bigger or equal than the item’s price (ie. it means that you can afford the item), the function should return true
@@ -143,9 +157,7 @@ let changeEnough(itemPrice, amountOfChange){
     let totalChange = amountOfChange[0] * 0.25 + amountOfChange[1] * 0.1 + amountOfChange[2] * 0.05 + amountOfChange[3] * 0.01;
   if(totalChange >= itemPrice){
     return true;
-  } else{
-    return false;
-  }
+  } 
 }
 // Change will always be represented in the following order: quarters, dimes, nickels, pennies.
 // A quarters is 0.25
@@ -179,41 +191,38 @@ function hotelCost(){
 // It should ask the user for the number of nights they would like to stay in the hotel.
     let numberOfNights = Number(prompt(`How many nights will you be staying?`));
 // If the user doesn’t answer or if the answer is not a number, ask again.
-    if(numberOfNights === null || isNaN(numberOfNights)){
+    while(numberOfNights === null || !isNaN(numberOfNights)){
         numberOfNights = Number(prompt(`How many nights will you be staying?`));
     }
-// The hotel costs $140 per night. The function should return the total price of the hotel.
-    else{
         return numberOfNights * 140;
     }
-}
+// The hotel costs $140 per night. The function should return the total price of the hotel.
+    
+
 
 // Define a function called planeRideCost().
 function planeRideCost(){
 // It should ask the user for their destination.
     let destination = prompt(`What is your destination?`);
 // If the user doesn’t answer or if the answer is not a string, ask again.
-    if(typeof destination !== "string" || destination === null || Number(destination) !== isNaN){
+    while(destination === null || !isNan(destination)){
         destination = prompt(`What is your destination?`);
     }
-// The function should return a different price depending on the location.
-    else{
         switch(destination){
             // “London”: 183$
             case "London":
                 return 183;
-                break;
             // “Paris” : 220$
             case "Paris":
                 return 220;
-                break;
             // All other destination : 300$
             default:
                 return 300;
-        }
+        
     }
 }
-
+// The function should return a different price depending on the location.
+  
 // Define a function called rentalCarCost().
 function rentalCarCost(){
 // It should ask the user for the number of days they would like to rent the car.
