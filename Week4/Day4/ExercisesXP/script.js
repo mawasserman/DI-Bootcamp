@@ -1,66 +1,63 @@
-// 🌟 Exercise 1 : Users
+// // 🌟 Exercise 1 : Users
 
-// Using Javascript:
-// Retrieve the div and console.log it
-const divContainer = document.getElementById('container');
-console.log(divContainer);
+// // Using Javascript:
+// // Retrieve the div and console.log it
+// const divContainer = document.getElementById('container');
+// console.log(divContainer);
 
-// Change the name “Pete” to “Richard”.
-const peteToRichard = document.querySelectorAll('li')[1];
-// console.log(peteToRichard);
-peteToRichard.innerText = 'Richard';
+// // Change the name “Pete” to “Richard”.
+// const peteToRichard = document.querySelectorAll('li')[1];
+// // console.log(peteToRichard);
+// peteToRichard.innerText = 'Richard';
 
-// Delete the <li> that contains the text node “Sarah”. (It’s the second <li> of the second <ul>)
-const sarahToDelete = document.querySelectorAll('li')[3];
-sarahToDelete.remove();
+// // Delete the <li> that contains the text node “Sarah”. (It’s the second <li> of the second <ul>)
+// const sarahToDelete = document.querySelectorAll('li')[3];
+// sarahToDelete.remove();
 
-// Change each first name of the two <ul>'s to your name. (Hint : use a loop)
-const arrUl = document.querySelectorAll('ul');
-console.log(arrUl);
+// // Change each first name of the two <ul>'s to your name. (Hint : use a loop)
+// const arrUl = document.querySelectorAll('ul');
+// console.log(arrUl);
 
-for(let i =0; i < arrUl.length; i++){
-    arrUl[i].firstElementChild.innerText = 'Marcella';
-}
+// for(let i =0; i < arrUl.length; i++){
+//     arrUl[i].firstElementChild.innerText = 'Marcella';
+// }
 
-// Bonus - Using Javascript:
-// Add a class called student_list to both of the <ul>'s.
-// Add the classes university and attendance to the first <ul>.
+// // Bonus - Using Javascript:
+// // Add a class called student_list to both of the <ul>'s.
+// for(let i =0; i < arrUl.length; i++){
+//     arrUl[i].classList.add("student_list");
+// }
 
+// // Add the classes university and attendance to the first <ul>.
+// arrUl[0].classList.add("university", "attendance");
 
-// 🌟 Exercise 2 : Users And Style
-// Instructions
-// <div>Users:</div>
-// <ul>
-//     <li>John</li>
-//     <li>Pete</li>
-// </ul>
+// // 🌟 Exercise 2 : Users And Style
 
+// // Using Javascript:
+// // Add a “light blue” background color and some padding to the <div>.
+// const divExercice2 = document.querySelector('div');
+// divExercice2.style.backgroundColor = 'lightblue';
+// divExercice2.style.padding = '10px';
 
-// Add the code above, to your HTML file
+// // Do not display the <li> that contains the text node “John”. (the first <li> of the <ul>)
+// const arrLis = document.querySelectorAll('li');
+// const hideJohn = arrLis[0]; //because I want the first
+// hideJohn.style.display = 'none';
 
-// Using Javascript:
-// Add a “light blue” background color and some padding to the <div>.
-// Do not display the <li> that contains the text node “John”. (the first <li> of the <ul>)
-// Add a border to the <li> that contains the text node “Pete”. (the second <li> of the <ul>)
-// Change the font size of the whole body.
+// // Add a border to the <li> that contains the text node “Pete”. (the second <li> of the <ul>)
+// const peteBorder = arrLis[1];
+// peteBorder.style.border = '1px solid black';
 
-// Bonus: If the background color of the div is “light blue”, alert “Hello x and y” (x and y are the users in the div).
+// // Change the font size of the whole body.
+// document.body.style.fontSize = '60px';
+
+// // Bonus: If the background color of the div is “light blue”, alert “Hello x and y” (x and y are the users in the div).
+// if(divExercice2.style.backgroundColor === 'lightblue'){
+//     alert(`Hello ${hideJohn.innerText} and ${peteBorder.innerText}`);
+// }
 
 
 // 🌟 Exercise 3 : Change The Navbar
-// Instructions
-// <div id="navBar">
-//     <ul>
-//         <li><a href="#">Profile</a></li>
-//         <li><a href="#">Home</a></li>
-//         <li><a href="#">My Friends</a></li>
-//         <li><a href="#">Messenger</a></li>
-//         <li><a href="#">My Pics</a></li>
-//     </ul>
-// </div>
-
-
-// Add the code above, to your HTML file
 
 // Using Javascript, in the <div>, change the value of the id attribute from navBar to socialNetworkNavigation, using the setAttribute method.
 
@@ -73,7 +70,7 @@ for(let i =0; i < arrUl.length; i++){
 // Use the firstElementChild and the lastElementChild properties to retrieve the first and last <li> elements from their parent element (<ul>). Display the text of each link. (Hint: use the textContent property).
 
 
-// Exercise 4 : My Book List
+// 🌟 Exercise 4 : My Book List
 // Instructions
 // Take a look at this link for help.
 
