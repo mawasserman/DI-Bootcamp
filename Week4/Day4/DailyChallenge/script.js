@@ -18,3 +18,4 @@ for(let i=0; i < planetsArr.length; i++){
 // Bonus: Do the same process to create the moons.
 // Be careful, each planet has a certain amount of moons. How should you display them?
 // Should you still use an array for the planets ? Or an array of objects ?
+
