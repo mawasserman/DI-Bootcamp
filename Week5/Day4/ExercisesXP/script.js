@@ -70,10 +70,8 @@
 
 
 // 🌟 Exercise 3: Drag & Drop
-// Instructions
-// <!DOCTYPE html>
-//     <html>
-//     <head>
+
+
 //         <style>
 //         #target {
 //           width: 200px;
@@ -88,14 +86,16 @@
 //           background-color: red;
 //         }
 //         </style>
-//     </head>
-//     <body>
+/
 //         <div id="target"></div>
 //         <br>
 //         <div id="box"></div>
-//     </body>
-//     </html>
 
 
 // Copy the code above, to a structured HTML file.
 // In your Javascript file add the functionality which will allow you to drag the box and drop it into the target. Check out the Course Notes named DOM animations.
+
+const box = document.getElementById('box');
+const target = document.getElementById('target');
+
+box.getAttribute('draggable', 'true');
