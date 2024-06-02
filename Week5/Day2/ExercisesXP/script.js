@@ -31,11 +31,11 @@
 // header1.addEventListener('mouseover', function() { header1.style.fontSize = Math.floor(Math.random() * 101) + 'px'; });
 
 // BONUS : When you hover on the 2nd paragraph, it should fade out (Check out “fade css animation” on Google)
+//Zachary fez usando o copilot... nao acho que ele entendeo o que ele fez.. igual ele nao entendeu o pq o math.random * 100 +1 nunca vai dar zero....
 
 //Skiped
 
 // 🌟 Exercise 2 : Work With Forms
-
 // // Retrieve the form and console.log it.
 // const form = document.querySelector('form');
 // console.log(form);
