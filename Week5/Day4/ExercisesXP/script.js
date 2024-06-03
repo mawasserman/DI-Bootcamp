@@ -86,7 +86,7 @@
 //           background-color: red;
 //         }
 //         </style>
-/
+
 //         <div id="target"></div>
 //         <br>
 //         <div id="box"></div>
