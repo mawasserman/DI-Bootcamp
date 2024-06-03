@@ -12,9 +12,22 @@
 // Hint : Check out keycodes in Javascript or Regular Expressions
 
 const input = document.querySelector('input');
+const warning = document.getElementById('warning');
+const paragraph = document.querySelector('p');
+const strong = document.querySelector('strong');
+paragraph.style.display = 'none';
 
-function onlyLetters(e) {
-    e.preventDefault();
+input.addEventListener('input', onlyLetters); 
 
+function onlyLetters(event){
+    const value = input.value;
+    const filteredValue = value.replace(/[^A-Za-z]/g, '');
 
-}
+    if (value !== filteredValue) {
+        warning.style.display = 'block';
+        input.value = filteredValue;
+
+    } else {
+        paragraph.style.display = 'none';
+    }
+};
