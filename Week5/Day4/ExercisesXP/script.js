@@ -98,4 +98,6 @@
 const box = document.getElementById('box');
 const target = document.getElementById('target');
 
-box.getAttribute('draggable', 'true');
+box.setAttribute('draggable', 'true');
+
+target.addEventListener('drop', letItGo);
