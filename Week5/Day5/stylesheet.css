@@ -1,0 +1,27 @@
+/* A Few Things To Think About…
+HTML, CSS:
+
+How will you make the grid of colors?
+How will you make the grid of blank squares?
+Hint… GRID :P */
+/* 
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+} */
+
+
+.menu {
+  width: 20%;
+  float: left;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.colors {
+   ;}
