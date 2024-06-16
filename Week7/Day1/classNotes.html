@@ -92,7 +92,73 @@ set column1 = value1,
 condition
 CUIDADO!!! TENHA SEMPRE UMA CONDITION NO UPDATE, SE NÃO VAI ATUALIZAR TODOS OS DADOS DA TABELA!!! E TODO MUNDO VAI TE ODIAR 
 
-delete statement
+DELETE STATEMENT
 delete from table_name
 where condition
+MESMO CUIDADO DO UPDATE, SEMPRE TENHA UMA CONDITION NO DELETE, SE NÃO VAI DELETAR TODOS OS DADOS DA TABELA
+
+no momento tá com auto commit ligado, então não precisa de commit pra salvar as alterações, só da push no final do dia
+depois o Ziv vai ensinar a desligar o auto commit etc... é na seta pra baixo do lado do botão de execute
+
+ALTER STATEMENT
+por exemplo, o varchar é 50 no momento, mas eu quero mudar pra 100
+alter table products add column description varchar(100); --- nesse add uma coluna nova, mas acho que da pra mudar as colunas antigas tbm
+alter table products alter column description type varchar(100); --- muda o tipo da coluna description para varchar(100)
+
+---- Intervalo.. 
+
+alter table persons
+add constraint pk_person primary key (id, LastName); --- adiciona uma constraint de chave primária na tabela persons com as colunas id e LastName
+
+AGGRAGATE FUNCTION
+são funções que operam em um conjunto de valores e retornam um único valor
+avg, count, sum, min, max
+select avg(column1) from table_name; --- vai retornar a média dos valores da coluna1
+select count(column1) from table_name; --- vai retornar a quantidade de valores da coluna1
+select sum(column1) from table_name; --- vai retornar a soma dos valores da coluna1
+select min(column1) from table_name; --- vai retornar o menor valor da coluna1
+select max(column1) from table_name; --- vai retornar o maior valor da coluna1
+
+postgres tutorial.. lá tem tudo que a gente precisa saber sobre o postgresql com exemplos 
+nós não vamos cobrir tudo de databases, então é bom dar uma olhada no tutorial
+
+LENGHT FUNCTION
+select length(column1) from table_name; --- vai retornar o tamanho do valor da coluna1
+pode usar o lengh tbm na condição do where
+ex. select * from table_name where length(column1) > 5; --- vai retornar todos os valores da tabela que tem mais de 5 caracteres na coluna1
+
+GROUP BY
+select column1, sum(column2) from table_name group by column1; --- vai retornar a soma dos valores da coluna2 agrupados pela coluna1
+ex select customer_id, sum(quantity) as total_quantity from sales
+group by customer_id
+
+JOIN
+é uma operação que combina colunas de duas ou mais tabelas baseado em uma coluna relacionada entre elas
+inner join, left join, right join, full join
+
+    INNER JOIN
+    select column1, column2 from table1 inner join table2 on table1.column1 = table2.column1; --- vai retornar os valores da coluna1 e coluna2 da tabela1 e tabela2 onde a coluna1 da tabela1 é igual a coluna1 da tabela2
+
+    LEFT JOIN
+    select column1, column2 from table1 left join table2 on table1.column1 = table2.column1; --- vai retornar os valores da coluna1 e coluna2 da tabela1 e tabela2 onde a coluna1 da tabela1 é igual a coluna1 da tabela2 e todos os valores da tabela1
+
+    RIGHT JOIN
+    select column1, column2 from table1 right join table2 on table1.column1 = table2.column1; --- vai retornar os valores da coluna1 e coluna2 da tabela1 e tabela2 onde a coluna1 da tabela1 é igual a coluna1 da tabela2 e todos os valores da tabela2
+
+    FULL JOIN
+    select column1, column2 from table1 full join table2 on table1.column1 = table2.column1; --- vai retornar os valores da coluna1 e coluna2 da tabela1 e tabela2 onde a coluna1 da tabela1 é igual a coluna1 da tabela2 e todos os valores da tabela1 e tabela2
+
+FOREING KEY
+é uma chave que faz referência a chave primária de outra tabela
+ex. create table orders (
+    order_id serial primary key,
+    customer_id int references customers(customer_id),
+    order_date date
+);
+
+
+pra abrir de um arquivo tar, a gente cria a database e depois clica com o botão direito e clica em restore e seleciona o arquivo .tar
+se ele não estiver mostrando a gente clica em all files (na parte de selecionar) e seleciona o arquivo .tar
+
+
 -->
