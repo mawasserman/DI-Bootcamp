@@ -1,0 +1,98 @@
+<!-- dois tipos de database
+relation database
+non-relation database
+
+relational database é um banco de dados que armazena dados em tabelas e essas tabelas são relacionadas entre si
+
+non-relational database é um banco de dados que armazena dados em documentos, grafos, colunas, etc
+
+no pgAdmin, para criar um banco de dados, clicar com o botão direito em Databases e clicar em Create Database
+
+para criar uma tabela, clicar com o botão direito em Tables e clicar em Create Table
+
+foreing data wrapper é uma extensão que permite acessar dados de um banco de dados remoto
+
+tables fica dentro de schemas
+
+CREATE TABLE nome_da_tabela (
+    nome_da_coluna tipo_da_coluna,
+    nome_da_coluna tipo_da_coluna,
+    nome_da_coluna tipo_da_coluna
+);
+
+para deletar uma tabela, clicar com o botão direito na tabela e clicar em Drop... Aparentemente é como eu deleto o database tbm
+
+para ver todos os tipos de dados que o postgresql aceita, digitar \dT no query tool ou ir na documentação...
+
+json por exemplo é unico para o postgresql. vai selecionar texto especifico de um json
+
+CONSTRAINS são regras que você pode aplicar a uma coluna. Exemplo: NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT
+
+not null: não pode ser nulo, 
+unique: não pode ter valores repetidos,
+primary key: não pode ser nulo e não pode ter valores repetidos,
+foreign key: é uma chave primária de outra tabela,
+check: verifica se o valor é verdadeiro,
+default: valor padrão
+
+para adicionar uma constraint, clicar com o botão direito na tabela e clicar em Properties e depois em Constraints
+
+sequence é onde a gente pode clicar no properties e vai mostrar o current value o increment e o min value e o max value... ele nunca volta atras, ele sempre incrementa
+poderia começar, por exemplo, em 11 ou 1000....
+
+select * from nome_da_tabela; mostra todos os dados da tabela * é = all
+
+pre executar um comando, selecionar o comando e clicar em execute ou apertar F5. mesmo se tiver comentado, se eu selecionar e colocar pra executar, ele vai executar
+
+para adicionar varios valores de uma vez pode colocar 
+insert into nome_da_tabela (nome_da_coluna1, nome_da_coluna2, nome_da_coluna3) 
+values (valor1, valor2, valor3), (valor1, valor2, valor3), (valor1, valor2, valor3);
+
+select column1, column2, ... from table_name conditions;
+
+é melhor usar sempre o nome da columa para select e não usar o * pq o * pode trazer informações que não são necessárias fora demorar muito mais.. vai pegar do catching quando usar o * e isso é mais lento do que pegar direto da tabela 
+
+select colum as alias from table_name; o ALIAS é um apelido para a coluna, não é o nome da coluna.. 
+
+pra fazer um concat, usar ||
+select column1 || ' ' || column2 from table_name;
+vai aparecer o valor da coluna1, um espaço e o valor da coluna2
+pode colocar junt com o alias tbm
+select column1 || ' ' || column2 as alias from table_name;
+
+"SQL é powerfull" - Ziv  
+
+order by asc ou desc, o default é asc
+select column1 from table_name order by name asc;
+select column1 from table_name order by name asc, price desc -- vai ordenar por name asc e price desc, ou seja, vai ordenar por name e se tiver valores iguais, vai ordenar por price
+
+Ziv vai mandar o file pra gente depois pra ter como anotação... 
+
+where - condição para selecionar os dados pode ser >, <, =, >=, <=, <>, !=, between, in, like, is null, is not null, and, or, not
+in é pra selecionar valores que estão em uma lista
+between é pra selecionar valores entre dois valores
+like é pra selecionar valores que são parecidos com um valor
+is null é pra selecionar valores que são nulos
+is not null é pra selecionar valores que não são nulos
+and é pra selecionar valores que atendem a duas condições
+or é pra selecionar valores que atendem a uma ou outra condição
+not é pra selecionar valores que não atendem a uma condição
+!= é pra selecionar valores que são diferentes de um valor específico
+
+não entendi muito a diferença entre o not e != , mas acho que o not é pra negar uma condição e o != é pra selecionar valores diferentes de um valor específico
+
+subquery é uma query dentro de outra query
+select * from table_name where column1 in (
+    (select column1 from table_name where name like 'A%');
+) 
+
+update table_name
+set column1 = value1,
+	column2 = value2,
+condition
+CUIDADO!!! TENHA SEMPRE UMA CONDITION NO UPDATE, SE NÃO VAI ATUALIZAR TODOS OS DADOS DA TABELA!!! E TODO MUNDO VAI TE ODIAR 
+
+delete statement
+delete from table_name
+where condition
+-->
