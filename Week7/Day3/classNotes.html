@@ -1,0 +1,89 @@
+<!-- 
+
+entrei na aula atrasadaas 18:30
+
+neondb é o banco de dados que a gente tá usando
+
+www.neondb.com
+www.console.neon.tech 
+
+vamos conectar o neondb com o pgadmin
+
+dashboard -> parameters only 
+
+no pgadmin, clicar com o botão direito em server -> register to new server -> connection -> copia o host do neondb e coloca no host do pgadmin -> copia o port do neondb e coloca no port do pgadmin -> copia o username do neondb e coloca no username do pgadmin -> copia o password do neondb e coloca no password do pgadmin
+NÃO CLICA SAVE!!! VAI NO ADVANCED.. DB restriction.. ai precisa ver se o nome do database ta lá ... depois clica save e vai aparecer o neondb no pgadmin
+
+
+truncate table table_name; é pra deletar todos os dados da tabela, mas não deleta a tabela
+
+delete from table_name; é pra deletar todos os dados da tabela e a tabela
+
+drop table table_name; é pra deletar a tabela
+
+diferença de delete e drop é que o delete deleta os dados da tabela e o drop deleta a tabela
+
+cometarios até agora: 19:05
+JavaScript Instructor
+18:52
+CREATE TABLE products (
+	id serial PRIMARY KEY,
+	name VARCHAR ( 50 )  NOT NULL,
+	price integer NOT NULL
+);
+JavaScript Instructor
+18:53
+INSERT INTO 
+    products (price, name)
+VALUES
+    (700, 'iPad'),
+    (800,'iPhone'),
+    (600,'iWatch'),
+    (900,'iCar');
+Jonathan Lebahar
+18:59
+ERROR:  syntax error at or near "delete"
+LINE 22: delete from products
+         ^ 
+
+SQL state: 42601
+Character: 357
+JavaScript Instructor
+19:04
+CREATE TABLE products_desc (
+	id serial PRIMARY KEY,
+	description VARCHAR (500),
+	product_id integer
+	CONSTRAINT fk_products
+		FOREIGN KEY (product_id)
+			REFERENCES products(id)
+				ON DELETE SET NULL
+);
+INSERT INTO 
+    products_desc (description, product_id)
+VALUES
+	('Amazing iPad' ,2),	
+	('Great iPhone' ,2),
+	('Best iWatch' ,2),
+	('Fastest car ever iCar' ,4);
+
+
+
+delete cascade é pra deletar os dados da tabela que tem a chave estrangeira que tá sendo deletada
+o default é no action, que não deixa deletar a chave estrangeira que tá sendo deletada
+set default é pra setar um valor default pra chave estrangeira que tá sendo deletada
+
+
+tables relations
+one to one 
+one to many
+many to many
+
+one to one é quando uma linha de uma tabela tem uma relação com uma linha de outra tabela
+
+one to many é quando uma linha de uma tabela tem uma relação com várias linhas de outra tabela
+
+many to many é quando várias linhas de uma tabela tem uma relação com várias linhas de outra tabela
+
+
+-->
