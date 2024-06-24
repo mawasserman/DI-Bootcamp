@@ -1,7 +1,7 @@
 // 🌟 Exercise 1 : Find The Sum
 // Instructions
 // Create a one line function (ie. an arrow function) that receives two numbers as parameters and returns the sum.
-
+((a, b) => { console.log(a + b) ;})(11, 13)
 
 // 🌟 Exercise 2 : Kg And Grams
 // Instructions
