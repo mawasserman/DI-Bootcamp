@@ -69,6 +69,25 @@
 
 // Invoke the inner function ONCE inside the outer function. Then invoke the outer function in the global scope.
 
+function makeJuice(size) {
+    let ingredients = [];
+    function addIngredients(ingA, ingB, ingC){
+        let div = document.createElement('div');
+        div.innerHTML = `The client wants a ${size} juice, containing ${ingA}, ${ingB}, ${ingC}`;
+        document.body.appendChild(div);
+        ingredients.push(ingA, ingB, ingC);
+    }
+    addIngredients("goiaba", "banana", "morango");
+    addIngredients("abacaxi", "laranja", "maçã");
+    function displayJuice(){
+        let div = document.createElement('div');
+        let allIng = ingredients.join(', ');
+        div.innerHTML = `The client wants a ${size} juice, containing ${allIng}`;
+        document.body.appendChild(div);
+    }
+    displayJuice();
+}
+makeJuice('small')
 
 // Part II:
 // In the makeJuice function, create an empty array named ingredients.
@@ -76,5 +95,6 @@
 // The addIngredients function should now receive 3 ingredients, and push them into the ingredients array.
 
 // Create a new inner function named displayJuice that displays on the DOM a sentence like The client wants a <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
+
 
 // The client wants 6 ingredients in his juice, therefore, invoke the addIngredients function TWICE. Then invoke once the displayJuice function. Finally, invoke the makeJuice function in the global scope.
