@@ -42,3 +42,12 @@ console.log(quotesArray);
 
 // Part 3
 
+function findByAuthor(){
+    let lookingFor = document.getElementById("searchAuthor").value;
+    quotesArray.filter(function(quote){
+        if (lookingFor === quote.author){
+            let searchResults = document.getElementById("searchResults");
+            searchResults.textContent = quote.author + " - " + quote.quote;
+        }
+    })
+}
