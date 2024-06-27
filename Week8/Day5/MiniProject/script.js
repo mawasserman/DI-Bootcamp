@@ -1,3 +1,4 @@
+//Part 1 DONE
 let quotesArray = [
     {id: 0, author: "Thiago Iziel", quote: "Ahá!!!"},
     {id: 1, author: "Uri Gabriel", quote: "Eu achei um pouquinho bacana demais!"},
@@ -26,5 +27,18 @@ function generateQuote() {
     }
 };
 
-//part 1 DONE
+// Part 2 DONE
+
+function addQuote(){
+    let author = document.getElementById("author").value;
+    let quote = document.getElementById("quote").value;
+    quotesArray.push({
+        id: quotesArray.length,
+        author: author,
+        quote: quote
+        
+})};
+console.log(quotesArray);
+
+// Part 3
 

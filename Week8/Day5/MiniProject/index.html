@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Mini Project - Random Quote</h1>
 
-
+<div class="container quote-card">
     <div id="quoteDisplay">
         <!-- Quote will be displayed here -->
     </div>
-    <div id="quoteAuthor">
+    <div id="quoteAuthor" class="author">
         <!-- Author will be displayed here -->
     </div>
 
     <button onclick="generateQuote()">Generate Quote</button>
+</div>
 
-
+<form onsubmit="event.preventDefault(); addQuote();">
+    <input type="text" id="quote" placeholder="Enter Quote">
+    <input type="text" id="author" placeholder="Enter Author">
+    <button type="submit">Save Quote</button>
+    
+</form>
+   
 
     <script src="script.js"></script>
 </body>
