@@ -38,7 +38,6 @@ function addQuote(){
         quote: quote
         
 })};
-console.log(quotesArray);
 
 // Part 3
 
@@ -49,5 +48,12 @@ function findByAuthor(){
             let searchResults = document.getElementById("searchResults");
             searchResults.textContent = quote.author + " - " + quote.quote;
         }
-    })
+    });
+}
+
+
+function previousQuote(){
+    let resultArray = quotesArray.filter(function(quote){
+
+        quotesArray.author = document.getElementById("searchResults");});
 }
