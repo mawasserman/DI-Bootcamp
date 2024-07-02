@@ -52,8 +52,41 @@ function findByAuthor(){
 }
 
 
-function previousQuote(){
-    let resultArray = quotesArray.filter(function(quote){
+// function previousQuote(){
+//     let resultArray = quotesArray.filter(function(quote){
 
-        quotesArray.author = document.getElementById("searchResults");});
-}
+//         quotesArray.author = document.getElementById("searchResults");});
+// }
+
+/**
+ DONE WITH ZIV ON THE 30/06/2024 (THE EXPLANATIONS NOT THE FULL EXERCISE)
+
+ para filtrar o autor ele usou o map e dentro ele colocou pra return o div com o quote e o author
+
+ function render(arr) {
+  const html = arr.map((quote) => {
+    return `<div>${quote.quote} - ${quote.author}</div>`;
+  });
+  document.getElementById("searchResults").innerHTML = html.join("");
+
+  render(quotesArray);
+
+  função para procurar o autor: 
+
+  function searchByAuthor() {
+    return filterQuotes = quotes.filter(item => { //vai criar uma array
+        return item.author.toLowerCase().includes(document.getElementById("searchAuthor").value.toLowerCase());
+    }
+    render(filterQuotes);
+  }
+
+MINHA DUVIDA... COMO FAZER O NEXT E O PREVIOUS
+
+estou confusa com o que ele ta fazendo...
+ele criou outra funcao.. rederOneQuote(quote) 
+
+const nextPreviousIndx = 0; .... to perdidona
+
+acho que ele fez uma funcao para cada.. pra prev e pra next... com arr.lenght >nextPrevIndex pro next e >=0 pro prev
+
+ */
