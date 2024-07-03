@@ -31,5 +31,39 @@
  * 
  *  Query string - é uma string que é passada na URL
  * 
+ * form com get request, se eu colocar meu login e senha na URL, ele vai aparecer na URL
+ * e quando a gente tá mandando sensitivy data a gente não quer que va pra url pq pode ser hackeado facilmente... ao inves disso a gente usa o post method
+ * 
+ * o post method é um método de requisição de dados que não aparece na URL... aparece no payload do form data.. 
+ * a gente bota o que a gente quer mandar no body do request(dentro do html) ... está escondido`
+ * 
+ * SWITCH 
+ * 
+ * JSON - JavaScript Object Notation - é um formato de dados que é fácil de ler e escrever para humanos e fácil de ler e escrever para máquinas
+ * 
+ * let str = '{"name": "John", "age": 30, "city": "New York"}';
+ * 
+ * let post = JSON.parse(str);
+ * console.log(post);
+ * 
+ * para functionar tem que ser um JSON válido, ou seja, tem que ter aspas duplas nos atributos e valores (não pode ter aspas simples e nem ser em só um deles)
+ * 
+ * let str2 = "bla bla bla"; NÃO É VALIDO para funcionar tem que ser um JSON válido
+ * >>>> let str2 = {"a": "bla bla bla"}; <<<< É VALIDO
+ * 
+ * JSON.stringify() - transforma um objeto em uma string JSON
+ * 
+ * let jsonUsers = JSON.stringify(users, undefined, 2); // o primeiro é obrigatorio, o segundo é um filtro e o terceiro é a quantidade de espaços
+ * 
+ * para garantir que o json user existe vc coloca pra return undifined
+ * 
+ * HANDLE EXCEPITONS
+ * 
+ * try {
+ * A;
+ * } catch (e) {
+ * console.error(e.stack); // pra ver informações do erro... podderia ser console.log
+ * 
+ * }
  * 
  */
