@@ -21,7 +21,9 @@ cons arr = [
 
 // Export this array using the Common JS syntax.
 
-module.exports = arr;
+module.exports = {
+    arr;
+}
 
 // Create another file named shop.js.
 
