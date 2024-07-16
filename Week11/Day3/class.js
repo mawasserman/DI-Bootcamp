@@ -65,6 +65,7 @@
  * colocaria dentro por ex. /node_modules
 //  * se colocar antes **/node_modules ele vai ignorar todos os node_modules
  /**
+  * não entendi como criar o .gitignorw
   * 
   * depois de instalar o slugify, eu posso importar ele no arquivo que eu quiser:
   * import slugify from 'slugify';
