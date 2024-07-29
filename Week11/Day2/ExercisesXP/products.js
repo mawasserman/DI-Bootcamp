@@ -1,7 +1,7 @@
 // 🌟 Exercise 1: Multiple Exports And Import Using CommonJS Syntax
 // Inside products.js, create an array of objects, each representing a product with properties like name, price, and category.
 
-cons arr = [
+const arr = [
     {
         name: 'product1',
         price: 100,
@@ -21,8 +21,8 @@ cons arr = [
 
 // Export this array using the Common JS syntax.
 
-module.exports = {
-    arr;
+module.exports = { 
+    arr
 }
 
 // Create another file named shop.js.
