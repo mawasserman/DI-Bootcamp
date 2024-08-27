@@ -1,22 +1,23 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
 
 // Exercise 1
-import Car from './Components/Car.jsx'
+// import Car from './Components/Car.jsx'
 
-// Exercise 1
-const carinfo = {name: "Ford", model: "Mustang"};
+// const carinfo = {name: "Ford", model: "Mustang"};
+
+//Exercise 2
+import Events from './Components/Events.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Car carinfo={carinfo} />
+      {/* <Car carinfo={carinfo} /> */}
+
+      <Events />
+
     </>
   )
 }
-
 
 
 export default App;
