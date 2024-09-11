@@ -48,3 +48,9 @@ let d = <Name> 'a';
 // dom elements... a gente pode especificar o tipo de elemento do dom
 let img = document.querySelector('img') as HTMLImageElement;
 // pro typescript saber que esse elemento realmente existe no documento... existe pra input tbm... HTMLInputElement
+//------------------------------
+
+//Bonieky
+
+let nome: string = FirstLetterToUpperCase('bonieky');
+
