@@ -58,3 +58,22 @@ padding: 5px;
   grid-column: 1fr;
   width: 5px;
 }
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(60, 1fr);
+  height: 100vh;
+ border: 1px solid grey
+  padding: 5px 5px 5px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
