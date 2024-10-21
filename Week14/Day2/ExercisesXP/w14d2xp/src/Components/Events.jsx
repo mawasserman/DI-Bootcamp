@@ -7,7 +7,8 @@ function Events () {
         alert("I was clicked");
     }
 
-    // //Behold Sir/Lady Checker! I missunderstood the task! Now I don't want to erase this code, so I will comment it out.
+    //Behold Sir/Lady Checker! I missunderstood the task! Now I don't want to erase this code, so I will comment it out.
+    
     // const [pressedKey, setPressedKey] = useState('Press any key');
     // const WRONGhandleKeyDown = (e) => {
     //     setPressedKey(`You pressed the "${e.key.toUpperCase()}" key`);
