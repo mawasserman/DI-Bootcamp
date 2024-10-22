@@ -23,13 +23,28 @@ import './App.css';
 // export default App;
 
 // Exercise 3
+// import React from 'react';
+// import Phone from './Components/Phone';
+
+// function App() {
+//   return (
+//     <div>
+//       <Phone />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// Exercise 4
+
 import React from 'react';
-import Phone from './Components/Phone';
+import FavoriteColor from './Components/Color';
 
 function App() {
   return (
     <div>
-      <Phone />
+      <FavoriteColor />
     </div>
   );
 }
