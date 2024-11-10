@@ -90,3 +90,7 @@ my_number += 5
 # += means "= my_number +"
 #In this example the value of "my_number" will be 10...This syntax can be used with every operator
 
+# CONDITIONALS
+
+# if, elif, else
+
