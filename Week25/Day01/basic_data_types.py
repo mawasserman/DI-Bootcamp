@@ -94,3 +94,16 @@ my_number += 5
 
 # if, elif, else
 
+# IN 
+# The "in" keyword is used to check if a value is present in a sequence (list, tuple, string, etc.). For example:
+my_list = [1, 2, 3, 4, 5]
+if 3 in my_list:
+    print("Yes, 3 is in the list")
+
+# NOT IN
+# The "not in" keyword is used to check if a value is not present in a sequence (list, tuple, string, etc.). For example:
+my_list = [1, 2, 3, 4, 5]
+if 6 not in my_list:
+    print("Yes, 6 is not in the list")
+
+    
