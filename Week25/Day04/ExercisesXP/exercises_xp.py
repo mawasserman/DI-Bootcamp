@@ -124,21 +124,51 @@ print(f"Your pizza has the following toppings: {toppings_list} and will cost you
 # if they are over the age of 12, the ticket is $15.
 
 # Ask a family the age of each person who wants a ticket.
+member_age = ""
+ticket_cost_list = []
 
+while member_age != "quit":
+    member_age = input("Enter the age of the person who wants a ticket, unless you don't want any more, then type 'quit': ")
+    if member_age != "quit":
+        age = int(member_age)        
+        if age < 3:
+            ticket_cost_list.append(0)
+        elif 3 <= age <= 12:
+            ticket_cost_list.append(10)
+        else:
+            ticket_cost_list.append(15)
+print(f"The total cost of all the family’s tickets is ${sum(ticket_cost_list)}.")
 # Store the total cost of all the family’s tickets and print it out.
 
 # A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
 # Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
 # At the end, print the final list.
+teenagers = ""
+permited_list = []
+
+while teenagers != "quit":
+    teenagers = input("Young hero! Reveal your age, or choose 'quit' to retreat —but beware, only the bold continue on!: ")
+    if teenagers != "quit":
+        age = int(teenagers)
+        if 16 <= age <= 21:
+            name_teenager = input("Ah, the perfect age for this perilous journey! Now, the final question: What is your name, hero?")
+            permited_list.append(name_teenager)
+        else:
+            print("Too Old to Rock ’n’ Roll ...OR... Too Young to this Movie! You shall not pass!")
+print(permited_list)
+
 
 
 # Exercise 10 : Sandwich Orders
 # Instructions
 # Using the list below :
 
-# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
 
 # The deli has run out of pastrami, use a while loop to remove all occurrences of “Pastrami sandwich” from sandwich_orders.
+while "Pastrami sandwich" in sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+
 # We need to prepare the orders of the clients:
 # Create an empty list called finished_sandwiches.
 # One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
@@ -147,3 +177,11 @@ print(f"Your pizza has the following toppings: {toppings_list} and will cost you
 # I made your avocado sandwich
 # I made your egg sandwich
 # I made your chicken sandwich
+finished_sandwiches = []
+
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+    finished_sandwiches.append(sandwich)
+
+for sandwich in finished_sandwiches:
+    print(f"I made your {sandwich}")
