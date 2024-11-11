@@ -21,37 +21,65 @@ print(our_fav_numbers)
 # 🌟 Exercise 2: Tuple
 # Instructions
 # Given a tuple which value is integers, is it possible to add more integers to the tuple?
+# No because tuples are immutable
 
 
 # 🌟 Exercise 3: List
 # Instructions
-# Using this list basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+# Using this list 
+basket = ["Banana", "Apples", "Oranges", "Blueberries"];
 
 # Remove “Banana” from the list.
+basket.remove("Banana")
 # Remove “Blueberries” from the list.
+basket.pop()
 # Add “Kiwi” to the end of the list.
+basket.append("Kiwi")
 # Add “Apples” to the beginning of the list.
+basket.insert(0, "Apples")
 # Count how many apples are in the basket.
+print(basket.count("Apples"))
 # Empty the basket.
+basket.clear()
 # Print(basket)
-
+print(basket)
 
 # 🌟 Exercise 4: Floats
 # Instructions
 # Recap – What is a float? What is the difference between an integer and a float?
+# Float are nunbers that have decimal points. The integer only have whole numbers.
+
 # Create a list containing the following sequence 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 (don’t hard-code the sequence).
+sequence_list = []
+i = 1.5
+while i < 5.5:
+    if i ==int(i):
+        sequence_list.append(int(i))
+    else:
+        sequence_list.append(i)
+    i += 0.5
+print(sequence_list)
+
 # Can you think of another way to generate a sequence of floats?
 
 
 # 🌟 Exercise 5: For Loop
 # Instructions
 # Use a for loop to print all numbers from 1 to 20, inclusive.
+for i in range(1, 21):
+    print(i)
 # Using a for loop, that loops from 1 to 20(inclusive), print out every element which has an even index.
+for i in range(1, 21):
+    if (i-1) % 2 == 0: #I did -1 to i because the index starts at 0 but the range we've put is from 1/starts at 1...
+        print(i)
 
 
 # 🌟 Exercise 6 : While Loop
 # Instructions
 # Write a while loop that will continuously ask the user for their name, unless the input is equal to your name.
+name = ""
+while name != "Marcella":
+    name = input("What is your name? ")
 
 
 # 🌟 Exercise 7: Favorite fruits
