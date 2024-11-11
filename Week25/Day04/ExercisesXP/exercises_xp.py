@@ -86,10 +86,18 @@ while name != "Marcella":
 # Instructions
 # Ask the user to input their favorite fruit(s) (one or several fruits).
 # Hint : Use the built in input method. Ask the user to separate the fruits with a single space, eg. "apple mango cherry".
+user_favorite_fruits = input("What is your favorite fruit(s)? Enter them separated by a space: ")
 # Store the favorite fruit(s) in a list (convert the string of words into a list of words).
+list_user_fav_fruits = user_favorite_fruits.split()
 # Now that we have a list of fruits, ask the user to input a name of any fruit.
+user_random_fruit = input("Enter a fruit name: ")
 # If the user’s input is in the favorite fruits list, print “You chose one of your favorite fruits! Enjoy!”.
 # If the user’s input is NOT in the list, print, “You chose a new fruit. I hope you enjoy”.
+if user_random_fruit in list_user_fav_fruits:
+    print("You chose one of your favorite fruits! Enjoy!")
+else:
+    print("You chose a new fruit. I hope you enjoy")
+
 
 
 # Exercise 8: Who ordered a pizza ?
@@ -97,6 +105,15 @@ while name != "Marcella":
 # Write a loop that asks a user to enter a series of pizza toppings, when the user inputs ‘quit’ stop asking for toppings.
 # As they enter each topping, print a message saying you’ll add that topping to their pizza.
 # Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
+topping = ""
+toppings_list = []
+while topping != "quit":
+    topping = input("Enter a topping, unless you don't want any more, then type 'quit': ")
+    if topping != "quit":
+        print(f"I'll add {topping} to your pizza")
+        toppings_list.append(topping)
+total_price = 10 + 2.5 * len(toppings_list)
+print(f"Your pizza has the following toppings: {toppings_list} and will cost you {total_price}.")
 
 
 # Exercise 9: Cinemax
