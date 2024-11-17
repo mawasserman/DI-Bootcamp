@@ -11,18 +11,67 @@
 # To do this project, you basically need to create four functions:
 
 # display_board() – To display the Tic Tac Toe board (GUI).
-display_board()
-
+def display_board(board):
+    print("\n  TIC TAC TOE\n\n   A   B   C")
+    for i, row in enumerate(board, start=1):
+        print(f"{i}  " + " | ".join(row))
+        if i < 3:
+            print("  ---|---|---")
+    print("\n")
 
 # player_input(player) – To get the position from the player.
-player_input(player)
+def player_input(player):
+    while True:
+        move = input(f"Player {player}, enter your move (e.g., 1A, 2B): ").strip().upper()
+        if len(move) != 2 or move[0] not in "123" or move[1] not in "ABC":
+            print("Use row(number) and column(letter) (e.g., 1A, 2B).")
+            continue
 
+        row = int(move[0]) - 1
+        col = "ABC".index(move[1])
+
+        if board[row][col] != " ":
+            print("That square is already taken. Choose another.")
+        else:
+            return row, col
 
 # check_win() – To check whether there is a winner or not.
-check_win()
+def check_win(board, player):
+    win = [
+        board[0], board[1], board[2],
+        [board[0][0], board[1][0], board[2][0]], 
+        [board[0][1], board[1][1], board[2][1]],
+        [board[0][2], board[1][2], board[2][2]],
+        [board[0][0], board[1][1], board[2][2]], 
+        [board[0][2], board[1][1], board[2][0]]  
+    ]
+    return any(all(cell == player for cell in line) for line in win)
+
 
 
 # play() – The main function, which calls all the functions created above.
+def play():
+    global board
+    board = [[" " for _ in range(3)] for _ in range(3)]
+    players = ["X", "O"]
+    turn = 0
+
+    for move in range(9):  
+        display_board(board)
+        player = players[turn % 2]
+        row, col = player_input(player)
+        board[row][col] = player
+
+        if check_win(board, player):
+            display_board(board)
+            print(f"Player {player} wins!")
+            return
+
+        turn += 1
+
+    display_board(board)
+    print("It's a tie!")
+
 play()
 
 
@@ -34,3 +83,4 @@ play()
 # What functionality will need to accur every turn to make this program work?
 # After contemplating the question above, think about splitting your code into smaller pieces (functions).
 # Remember to follow the single responsibility principle! each function should do one thing and do it well!
+
