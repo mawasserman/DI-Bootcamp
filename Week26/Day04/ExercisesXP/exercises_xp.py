@@ -75,38 +75,64 @@ main()
 
 # Here is an array of dictionaries, containing those questions and answers
 
-# data = [
-#     {
-#         "question": "What is Baby Yoda's real name?",
-#         "answer": "Grogu"
-#     },
-#     {
-#         "question": "Where did Obi-Wan take Luke after his birth?",
-#         "answer": "Tatooine"
-#     },
-#     {
-#         "question": "What year did the first Star Wars movie come out?",
-#         "answer": "1977"
-#     },
-#     {
-#         "question": "Who built C-3PO?",
-#         "answer": "Anakin Skywalker"
-#     },
-#     {
-#         "question": "Anakin Skywalker grew up to be who?",
-#         "answer": "Darth Vader"
-#     },
-#     {
-#         "question": "What species is Chewbacca?",
-#         "answer": "Wookiee"
-#     }
-# ]
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977" # Same year of the last death penalty in France that used a guillotine 
+    },
+    {
+        "question": "Who built C-3PO? (First and last name)",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
 
 
 # Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
 # Create a function that informs the user of his number of correct/incorrect answers.
 # Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
 # If he had more then 3 wrong answers, ask him to play again.
+
+
+
+def quiz():
+    right_answers = 0
+    wrong_answers = []
+
+    for question in data:
+        answer = input(question["question"] + " ")
+        if answer.lower().strip() == question["answer"].lower():
+            print("Correct!")
+            right_answers += 1
+        else:
+            print("Incorrect.")
+            wrong_answers.append(f"Question: {question['question']}\n"
+                f"Your answer: {answer}\n"
+                f"Correct answer: {question['answer']}\n")
+            
+    print(f"You got {right_answers} correct and {len(wrong_answers)} incorrect.")
+    if wrong_answers:
+        print("\nYou got the following questions wrong:")
+        print("\n".join(wrong_answers))
+    else:
+        print("Great job! You answered all questions correctly!")
+
+quiz()
 
 
 # Exercise 3 : When will I retire ?
