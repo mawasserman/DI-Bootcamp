@@ -148,14 +148,32 @@ quiz()
 # Now it has all the information it needs in order to determine if the person with the given gender and date of birth is able to retire or not.
 # Calculate. You may need to do a little more hard-coding here.
 # Return True if the person can retire, and False if he/she can’t.
-# Some Hints
 
+# Some Hints
 # Ask for the user’s gender as “m” or “f”.
 # Ask for the user’s date of birth in the form of “yyyy/mm/dd”, eg. “1993/09/21”.
 # Call can_retire to get a definite value for whether the person can or can’t retire.
 # Display a message informing the user whether they can retire or not.
 # As always, test your code to ensure it works.
 
+def get_age():
+    date_today = input("Please enter today's date in the format yyyy/mm/dd: ").split("/")
+    gender = input("Please enter your gender (m/f): ").lower().strip()
+    date_birth = input("Please enter your birthdate in the format yyyy/mm/dd: ").split("/")
+    
+    age = int(date_today[0]) - int(date_birth[0])
+    if int(date_today[1]) < int(date_birth[1]) or (int(date_today[1]) == int(date_birth[1]) and int(date_today[2]) < int(date_birth[2])):
+        age -= 1
+    
+    if gender == "m" and age >= 67:
+        print(f"You are {age}, so you can retire.")
+    elif gender == "f" and age >= 62:
+        print(f"You are {age}, so you can retire.")
+    else:
+        print(f"You are {age}, so you can NOT retire. Work slave!")
+
+get_age()
+    
 
 # Exercise 4:
 # Instructions
