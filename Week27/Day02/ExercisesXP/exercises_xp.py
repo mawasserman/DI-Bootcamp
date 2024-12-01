@@ -1,28 +1,28 @@
-# 🌟 Exercise 1: Cats
-# Instructions
-# Using this class
+# # 🌟 Exercise 1: Cats
+# # Instructions
+# # Using this class
 
-class Cat:
-    def __init__(self, cat_name, cat_age):
-        self.name = cat_name
-        self.age = cat_age
+# class Cat:
+#     def __init__(self, cat_name, cat_age):
+#         self.name = cat_name
+#         self.age = cat_age
     
-# Instantiate three Cat objects using the code provided above.
-# Outside of the class, create a function that finds the oldest cat and returns the cat.
-# Print the following string: “The oldest cat is <cat_name>, and is <cat_age> years old.”. Use the function previously created.
+# # Instantiate three Cat objects using the code provided above.
+# # Outside of the class, create a function that finds the oldest cat and returns the cat.
+# # Print the following string: “The oldest cat is <cat_name>, and is <cat_age> years old.”. Use the function previously created.
 
-add_cat1 = Cat("Tom", 5)
-add_cat2 = Cat("Sylvester", 3)
-add_cat3 = Cat("Garfield", 7)
+# add_cat1 = Cat("Tom", 5)
+# add_cat2 = Cat("Sylvester", 3)
+# add_cat3 = Cat("Garfield", 7)
 
-def oldest_cat(*cats):
-    oldest = cats[0]
-    for cat in cats:
-        if cat.age > oldest.age:
-            oldest = cat
-    print(f"The oldest cat is {oldest.name}, and is {oldest.age} years old.")
+# def oldest_cat(*cats):
+#     oldest = cats[0]
+#     for cat in cats:
+#         if cat.age > oldest.age:
+#             oldest = cat
+#     print(f"The oldest cat is {oldest.name}, and is {oldest.age} years old.")
 
-oldest_cat(add_cat1, add_cat2, add_cat3)
+# oldest_cat(add_cat1, add_cat2, add_cat3)
 
 # 🌟 Exercise 2 : Dogs
 # Instructions
@@ -35,6 +35,36 @@ oldest_cat(add_cat1, add_cat2, add_cat3)
 # Create an object called sarahs_dog. Her dog’s name is “Teacup” and his height is 20cm.
 # Print the details of her dog (ie. name and height) and call the methods bark and jump.
 # Create an if statement outside of the class to check which dog is bigger. Print the name of the bigger dog.
+
+class Dog:
+    def __init__(self, name, height):
+        self.name = name
+        self.height = height
+    
+    def bark(self):
+        print(f"{self.name} goes woof!")
+
+    def jump(self):
+        if isinstance(self.height, int):
+            print(f"{self.name} jumps {self.height*2} cm high!")
+        else:
+            print(f"{self.name} jumps {int(self.height)*2} cm high!")
+
+davids_dog = Dog("Rex", 50)
+sarahs_dog = Dog("Teacup", 20)
+
+def the_dogs(owner, dog):
+    print(f"{owner}'s dog is {dog.name} and is {dog.height}cm tall.")
+    dog.bark()
+    dog.jump()
+
+the_dogs('David', davids_dog)
+the_dogs('Sarah', sarahs_dog)
+
+if davids_dog.height > sarahs_dog.height:
+    print(f"{davids_dog.name} is bigger than {sarahs_dog.name}")
+else:
+    print(f"{sarahs_dog.name} is bigger than {davids_dog.name}")
 
 
 # 🌟 Exercise 3 : Who’s the song producer?
