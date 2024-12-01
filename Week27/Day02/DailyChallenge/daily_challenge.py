@@ -51,11 +51,11 @@ class Farm:
 
     def get_short_info(self):
         animal_types = self.get_animal_types()
-        animals_with_s = [f"{animal}s" if self.animals[animal] > 1 else animal for animal in animal_types]
-        if len(animals_with_s) > 1:
-            animal_list = ", ".join(animals_with_s[:-1]) + " and " + animals_with_s[-1]
+        animals_plural = [f"{animal}s" if self.animals[animal] > 1 else animal for animal in animal_types]
+        if len(animals_plural) > 1:
+            animal_list = ", ".join(animals_plural[:-1]) + " and " + animals_plural[-1]
         else:
-            animal_list = animals_with_s[0]
+            animal_list = animals_plural[0]
         return f"{self.name}’s farm has {animal_list}."
 
 macdonald = Farm("McDonald")
