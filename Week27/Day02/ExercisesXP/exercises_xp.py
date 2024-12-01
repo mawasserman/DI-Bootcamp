@@ -36,35 +36,35 @@
 # Print the details of her dog (ie. name and height) and call the methods bark and jump.
 # Create an if statement outside of the class to check which dog is bigger. Print the name of the bigger dog.
 
-class Dog:
-    def __init__(self, name, height):
-        self.name = name
-        self.height = height
+# class Dog:
+#     def __init__(self, name, height):
+#         self.name = name
+#         self.height = height
     
-    def bark(self):
-        print(f"{self.name} goes woof!")
+#     def bark(self):
+#         print(f"{self.name} goes woof!")
 
-    def jump(self):
-        if isinstance(self.height, int):
-            print(f"{self.name} jumps {self.height*2} cm high!")
-        else:
-            print(f"{self.name} jumps {int(self.height)*2} cm high!")
+#     def jump(self):
+#         if isinstance(self.height, int):
+#             print(f"{self.name} jumps {self.height*2} cm high!")
+#         else:
+#             print(f"{self.name} jumps {int(self.height)*2} cm high!")
 
-davids_dog = Dog("Rex", 50)
-sarahs_dog = Dog("Teacup", 20)
+# davids_dog = Dog("Rex", 50)
+# sarahs_dog = Dog("Teacup", 20)
 
-def the_dogs(owner, dog):
-    print(f"{owner}'s dog is {dog.name} and is {dog.height}cm tall.")
-    dog.bark()
-    dog.jump()
+# def the_dogs(owner, dog):
+#     print(f"{owner}'s dog is {dog.name} and is {dog.height}cm tall.")
+#     dog.bark()
+#     dog.jump()
 
-the_dogs('David', davids_dog)
-the_dogs('Sarah', sarahs_dog)
+# the_dogs('David', davids_dog)
+# the_dogs('Sarah', sarahs_dog)
 
-if davids_dog.height > sarahs_dog.height:
-    print(f"{davids_dog.name} is bigger than {sarahs_dog.name}")
-else:
-    print(f"{sarahs_dog.name} is bigger than {davids_dog.name}")
+# if davids_dog.height > sarahs_dog.height:
+#     print(f"{davids_dog.name} is bigger than {sarahs_dog.name}")
+# else:
+#     print(f"{sarahs_dog.name} is bigger than {davids_dog.name}")
 
 
 # 🌟 Exercise 3 : Who’s the song producer?
@@ -83,6 +83,18 @@ else:
 # all that glitters is gold
 # and she’s buying a stairway to heaven
 
+class Song:
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+    
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
+
+stairway = Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
+
+stairway.sing_me_a_song()
+
 
 # Exercise 4 : Afternoon at the Zoo
 # Instructions
@@ -93,16 +105,6 @@ else:
 # Create a method called get_animals that prints all the animals of the zoo.
 # Create a method called sell_animal that takes one parameter animal_sold. This method removes the animal from the list and of course the animal needs to exist in the list.
 # Create a method called sort_animals that sorts the animals alphabetically and groups them together based on their first letter.
-# Example
-
-# { 
-#     1: "Ape",
-#     2: ["Baboon", "Bear"],
-#     3: ['Cat', 'Cougar'],
-#     4: ['Eel', 'Emu']
-# }
-
-
 # Create a method called get_groups that prints the animal/animals inside each group.
 
 # Create an object called ramat_gan_safari and call all the methods.
@@ -110,3 +112,52 @@ else:
 # Example
 # Which animal should we add to the zoo --> Giraffe
 # x.add_animal(Giraffe)
+
+class Zoo:
+    def __init__(self, zoo_name):
+        self.animals = []
+        self.name = zoo_name
+    
+    def add_animal(self, new_animal):
+        if new_animal not in self.animals:
+            self.animals.append(new_animal)
+
+    def get_animals(self):
+        print(self.animals)
+
+    def sell_animal(self, animal_sold):
+        if animal_sold in self.animals:
+            self.animals.remove(animal_sold)
+
+    def sort_animals(self):
+        self.animals.sort()
+        animals_dict = {}
+        for animal in self.animals:
+            if animal[0] not in animals_dict:
+                animals_dict[animal[0]] = [animal]
+            else:
+                animals_dict[animal[0]].append(animal)
+        return animals_dict
+
+    def get_groups(self):
+        grouped_animals = self.sort_animals()
+        print("Animal groups:")
+        for group, animals in grouped_animals.items():
+            print(f"{group}: {', '.join(animals)}") 
+
+
+ramat_gan_safari = Zoo("Ramat Gan Safari")
+
+ramat_gan_safari.add_animal("Giraffe")
+ramat_gan_safari.add_animal("Bear")
+ramat_gan_safari.add_animal("Baboon")
+ramat_gan_safari.add_animal("Cougar")
+ramat_gan_safari.add_animal("Cat")
+ramat_gan_safari.add_animal("Emu")
+ramat_gan_safari.add_animal("Eel")
+ramat_gan_safari.add_animal("Ape")
+
+ramat_gan_safari.get_animals()
+ramat_gan_safari.sell_animal("Bear")
+ramat_gan_safari.get_groups()
+
