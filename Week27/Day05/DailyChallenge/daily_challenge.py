@@ -3,13 +3,28 @@
 # Answer the following questions
 
 # What is a class? 
+# The bucket that contains the blueprint for objects.
+
 # What is an instance?
+# An object created from a class, the molded sand
+
 # What is encapsulation?
+#All the properties and actions of a specific item
+
 # What is abstraction?
+#Who bought the bucket? - just kidding, but not so much. It's hiding the process and having faith that everything will work out.
+
 # What is inheritance?
+# Inheritance is basically acquiring traits or features from your parents.
+
 # What is multiple inheritance?
+# Having more than one parent
+
 # What is polymorphism?
+# A command could give birth to many forms or styles of output. 
+
 # What is method resolution order or MRO?
+# The order in which classes are searched for method definitions.
 
 
 # Part 2: Create a deck of cards class.
