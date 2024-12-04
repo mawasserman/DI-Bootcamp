@@ -13,7 +13,7 @@ from nltk.corpus import wordnet
 nltk.download('wordnet')
 
 class AnagramChecker():
-    def __init__(self, text_file = 'words.txt'):
+    def __init__(self, text_file = 'Week28\Day05\MiniProject\words.txt'):
         with open(text_file, 'r') as f:
             self.text_file = set(word.strip().lower() for word in f if word.strip().isalpha())
 
@@ -32,6 +32,3 @@ class AnagramChecker():
             matching_words.remove(word1)
         
         return matching_words
-            
-
-
