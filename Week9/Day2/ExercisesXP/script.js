@@ -34,7 +34,8 @@ displayStudentInfo({first: 'Elie', last:'Schoppik'});
 
 // 🌟 Exercise 3: User & id
 // Instructions
-// Using this object const users = { user1: 18273, user2: 92833, user3: 90315 }
+// Using this object 
+const users = { user1: 18273, user2: 92833, user3: 90315 }
 
 // Using methods taught in class, turn the users object into an array:
 // Excepted output: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
@@ -47,14 +48,14 @@ displayStudentInfo({first: 'Elie', last:'Schoppik'});
 // Exercise 4 : Person class
 // Instructions
 // Analyze the code below. What will be the output?
-// class Person {
-//   constructor(name) {
-//     this.name = name;
-//   }
-// }
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
 
-// const member = new Person('John');
-// console.log(typeof member);
+const member = new Person('John');
+console.log(typeof member);
 
 
 // 🌟 Exercise 5 : Dog class
