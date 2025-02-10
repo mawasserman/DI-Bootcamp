@@ -86,12 +86,12 @@ class Labrador extends Dog {
 
 
 //   // 3
-// class Labrador extends Dog {
-//   constructor(size) {
-//     super(name);
-//     this.size = size;
-//   }
-// };
+class Labrador extends Dog {
+  constructor(size) {
+    super(name);
+    this.size = size;
+  }
+};
 
 
 //   // 4
