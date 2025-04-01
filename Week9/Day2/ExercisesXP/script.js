@@ -22,9 +22,9 @@ console.log(`I am ${name} from ${city}, ${country}. Latitude(${lat}), Longitude(
 // 🌟 Exercise 2: Display Student Info
 // Instructions
 
-function displayStudentInfo({first, last}) {
-    return `Your full name is ${first} ${last}`;
-}
+// function displayStudentInfo({first, last}) {
+//     return `Your full name is ${first} ${last}`;
+// }
 
 // displayStudentInfo({first: 'Elie', last:'Schoppik'});
 
