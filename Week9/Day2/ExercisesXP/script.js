@@ -41,6 +41,9 @@ const users = { user1: 18273, user2: 92833, user3: 90315 }
 // Excepted output: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
 // FYI : The number is their ID number.
 
+const userArray = Obeject.entries(users);
+console.log(userArray); // [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
+
 // Modify the outcome of part 1, by multipling the user’s ID by 2.
 // Excepted output: [ [ 'user1', 36546 ], [ 'user2', 185666 ], [ 'user3', 180630 ] ]
 
@@ -56,6 +59,7 @@ class Person {
 
 const member = new Person('John');
 console.log(typeof member);
+// 'object'
 
 
 // 🌟 Exercise 5 : Dog class
