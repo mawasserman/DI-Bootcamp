@@ -17,6 +17,7 @@ const person = {
 const {name, location: {country, city, coordinates: [lat, lng]}} = person;
 
 console.log(`I am ${name} from ${city}, ${country}. Latitude(${lat}), Longitude(${lng})`); 
+// I am John Doe from Vancouver, Canada. Latitude(49.2827), Longitude(-123.1207)
 
 
 // 🌟 Exercise 2: Display Student Info
@@ -26,16 +27,15 @@ function displayStudentInfo({first, last}) {
     return `Your full name is ${first} ${last}`;
 }
 
-// displayStudentInfo({first: 'Elie', last:'Schoppik'});
+displayStudentInfo({first: 'Elie', last:'Schoppik'});
 
-// // Using the code above, destructure the parameter inside the function and return a string as the example seen below:
-// // //output : 'Your full name is Elie Schoppik'
+// 'Your full name is Elie Schoppik'
 
 
-// // 🌟 Exercise 3: User & id
-// // Instructions
-// // Using this object 
-// const users = { user1: 18273, user2: 92833, user3: 90315 }
+// 🌟 Exercise 3: User & id
+// Instructions
+// Using this object 
+const users = { user1: 18273, user2: 92833, user3: 90315 }
 
 // Using methods taught in class, turn the users object into an array:
 // Excepted output: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
