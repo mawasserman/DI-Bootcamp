@@ -72,15 +72,15 @@ class Dog {
   }
 };
 // Analyze the options below. Which constructor will successfully extend the Dog class?
-//   // 1
-// class Labrador extends Dog {
-//   constructor(name, size) {
-//     this.size = size;
-//   }
-// };
+// 1
+class Labrador extends Dog {
+  constructor(name, size) {
+    this.size = size;
+  }
+};
 
 
-//   // 2
+// 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Correct Answer!!!!! It calls the super constructor first and then initializes the size property.
 class Labrador extends Dog {
   constructor(name, size) {
     super(name);
@@ -89,7 +89,7 @@ class Labrador extends Dog {
 };
 
 
-//   // 3
+// 3
 class Labrador extends Dog {
   constructor(size) {
     super(name);
@@ -98,20 +98,20 @@ class Labrador extends Dog {
 };
 
 
-//   // 4
-// class Labrador extends Dog {
-//   constructor(name, size) {
-//     this.name = name;
-//     this.size = size;
-//   }
-// };
+// 4
+class Labrador extends Dog {
+  constructor(name, size) {
+    this.name = name;
+    this.size = size;
+  }
+};
 
 
 // 🌟 Exercise 6 : Challenges
 // Evaluate these (ie True or False)
 
-// [2] === [2] 
-// {} === {}
+[2] === [2] // I thought it was true, but it is false because they are two different arrays in memory
+{} === {} //False because they are two different objects in memory (after I got the above wrong) 
 
 
 // What is, for each object below, the value of the property number and why?
