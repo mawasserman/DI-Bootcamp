@@ -110,8 +110,8 @@ class Labrador extends Dog {
 // 🌟 Exercise 6 : Challenges
 // Evaluate these (ie True or False)
 
-[2] === [2] // I thought it was true, but it is false because they are two different arrays in memory
-{} === {} //False because they are two different objects in memory (after I got the above wrong) 
+// [2] === [2] // I thought it was true, but it is false because they are two different arrays in memory
+// {} === {} //False because they are two different objects in memory (after I got the above wrong) 
 
 
 // What is, for each object below, the value of the property number and why?

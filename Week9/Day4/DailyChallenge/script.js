@@ -6,3 +6,23 @@
 
 
 // output
+
+const form = document.querySelector('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById('name').value; 
+    const lastName = document.getElementById('lastName').value;
+
+    const data = {
+        name: name,
+        lastName: lastName
+    };
+
+    const jsonData = JSON.stringify(data);
+    result.textContent = jsonData;
+
+    form.reset(); 
+});
