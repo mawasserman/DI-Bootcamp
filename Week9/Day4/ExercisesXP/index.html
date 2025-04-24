@@ -7,13 +7,27 @@
 </head>
 <body>
     <!-- Ex1 -->
-     <form action="" method="get">
-        <p>Name</p>
-        <input type="text">
-        <label for="comments">Comments</label>
-        <input type="text" name="comments"><br>
+    <!-- <form id="formEx1" action="/form" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Send">
+    </form> -->
+
+    <!-- Ex2 -->        
+    <form id="formEx1" action="/form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
         <input type="submit" value="Send">
     </form>
+
 
     <script src="script.js"></script>
 
