@@ -16,11 +16,8 @@
 // Use the fetch() method to make a GET request to the Giphy API and Console.log the Javascript Object that you receive.
 // Make sure to check the status of the Response and to catch any occuring errors.
 
-
-// Output Example:
-
-// output
-
+fetch ("https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+    .then(response => {
 
 
 // 🌟 Exercise 2 : Giphy API
@@ -35,9 +32,9 @@
 // Instructions
 // Improve the program below :
 
-fetch("https://www.swapi.tech/api/starships/9/")
-    .then(response => response.json())
-    .then(objectStarWars => console.log(objectStarWars.result));
+// fetch("https://www.swapi.tech/api/starships/9/")
+//     .then(response => response.json())
+//     .then(objectStarWars => console.log(objectStarWars.result));
 // Create an async function, that will await for the above GET request.
 // The program shouldn’t contain any then() method.
 // Make sure to check the status of the Response and to catch any occuring errors.
