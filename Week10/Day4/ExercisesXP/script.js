@@ -55,9 +55,20 @@ fetch ("https://api.giphy.com/v1/gifs/search?q=sun&limit=10&offset=2&rating=g&ap
 // Instructions
 // Improve the program below :
 
-// fetch("https://www.swapi.tech/api/starships/9/")
-//     .then(response => response.json())
-//     .then(objectStarWars => console.log(objectStarWars.result));
+async function fetchSW () {
+    try{
+        const response = await fetch("https://www.swapi.tech/api/starships/9/")
+            if (!response.ok) {
+                throw new Error("Failed to fetch the starship data");
+            }
+            const data = await response.json();
+            console.log(data.result);
+        } catch (error) {
+            console.error(`Error: ${error}`);
+        }
+}
+
+fetchSW()
 // Create an async function, that will await for the above GET request.
 // The program shouldn’t contain any then() method.
 // Make sure to check the status of the Response and to catch any occuring errors.
