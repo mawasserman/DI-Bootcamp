@@ -93,9 +93,9 @@ fetchSW()
 // }
 
 // async function asyncCall() {
-//     console.log('calling');
-//     let result = await resolveAfter2Seconds();
-//     console.log(result);
+//     console.log('calling'); //1st
+//     let result = await resolveAfter2Seconds(); // 2nd after 2 seconds
+//     console.log(result); //3rd right after the 2 seconds ('resolved')
 // }
 
 // asyncCall();
