@@ -38,6 +38,19 @@ fetch ("https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZyc
 // Console.log the Javascript Object that you receive.
 
 
+fetch ("https://api.giphy.com/v1/gifs/search?q=sun&limit=10&offset=2&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Error`);
+        }
+        return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => {
+        console.error(`Error: ${error}`);
+    });
+
+
 // 🌟 Exercise 3 : Async function
 // Instructions
 // Improve the program below :
