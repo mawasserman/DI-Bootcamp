@@ -16,8 +16,8 @@
 // Use the fetch() method to make a GET request to the Giphy API and Console.log the Javascript Object that you receive.
 // Make sure to check the status of the Response and to catch any occuring errors.
 
-fetch ("https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
-    .then(response => {
+// fetch ("https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+//     .then(response => {
 
 
 // 🌟 Exercise 2 : Giphy API
