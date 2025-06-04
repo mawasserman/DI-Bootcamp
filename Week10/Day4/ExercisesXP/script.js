@@ -63,9 +63,9 @@ async function fetchSW () {
             }
             const data = await response.json();
             console.log(data.result);
-        } catch (error) {
-            console.error(`Error: ${error}`);
-        }
+    } catch (error) {
+        console.error(`Error: ${error}`);
+    }
 }
 
 fetchSW()
