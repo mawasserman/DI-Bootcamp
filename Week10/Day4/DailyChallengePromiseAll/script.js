@@ -29,8 +29,8 @@ form.addEventListener("submit", function(e) {
         const p2 = document.createElement("p");
         p2.textContent = "City 2 Sunrise: " + data2.results.sunrise;
 
-        const result = document.getElementById("result");
-        result.appendChild(p1);
-        result.appendChild(p2);
+        // const result = document.getElementById("result");
+        // result.appendChild(p1);
+        // result.appendChild(p2);
     });
 });
