@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency converter</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        #result {
+            background-color: #7eaf82;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }</style>
 </head>
 <body>
     <h1>Currency Converter</h1>
@@ -11,13 +31,14 @@
     <form id="converterForm">
         <input type="number" id="amount" placeholder="Enter amount" required>
 
-        <input type="text" id="fromCurrency" placeholder="From currency" required>
-        <input type="text" id="toCurrency" placeholder="To currency" required>
+        <select id="fromCurrency" required></select>
+        <select id="toCurrency" required></select>
+
 
         <button type="submit" id="convert">Convert</button>
-        <button type="switch" id="switchButton">Switch</button>
+        <!-- <button type="switch" id="switchButton">Switch</button> -->
     </form>
-    
+
     <div id="result"></div>
 
 
